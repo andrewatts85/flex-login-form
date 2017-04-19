@@ -1,0 +1,105 @@
+/* use w/ css reset normalize */
+/* grid engine */
+/* mobile first approach w/ stacking columns */
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  flex: 1;
+  margin: .6em;
+  overflow: hidden;
+}
+
+body {
+  padding: 1em;
+}
+
+/* form styles */
+form {
+  max-width: 17em;
+  border: 1px solid lightgray;
+  margin: 3% auto;
+}
+
+.row:nth-child(1) {
+  background-color: #101D42;
+}
+
+.row:nth-child(1) .col {
+  display: flex;
+  justify-content: center;
+  height: 2.5em;
+}
+
+h3 {
+  align-self: center;
+  /*text-align: center;*/
+  color: white;
+}
+
+input {
+  width: 100%;
+  border: .063em solid lightgray;
+  box-sizing: border-box;
+}
+
+#userEmail {
+  margin-top: .5em;
+}
+
+input[type="submit"] {
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  border-radius: .1em;
+  padding: .4em 0;
+}
+
+input[type="checkbox"] {
+  width: 1.2em;
+  font-size: .8em;
+  vertical-align: middle;
+}
+
+label {
+  font-size: small;
+  color: slategray;
+  cursor: pointer;
+}
+
+.row:nth-child(5) a {
+  font-size: small;
+  text-decoration: none;
+  color: slategray;
+}
+
+.row:nth-child(5) .col {
+  text-align: center;
+}
+
+.valid {
+  border-color: lightgreen;
+}
+
+.invalid {
+  border-color: red;
+}
+
+/* devices 400px wide or more */
+@media screen and (min-width: 400px) {
+	.row {
+    flex-direction: row;
+  }
+  
+  .row:nth-child(5) .col:nth-child(1) {
+    text-align: left;
+  }
+  
+  .row:nth-child(5) .col:nth-child(2) {
+    text-align: right;
+  }
+}
